@@ -30,7 +30,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
-        alignment: Alignment.bottomCenter,
+        alignment: widget.alignment,
         children: <Widget>[
           Container(
             padding: const EdgeInsets.only(bottom: 4.0),
