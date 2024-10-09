@@ -231,7 +231,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
   }
 
   bool isIndexSelected(int index) {
-    if (!_focusNode.hasFocus || !widget.enabled) return false;
+    if (!widget.enabled) return false;
 
     return _selectedIndex == index ||
         (_selectedIndex == index + 1 && index + 1 == widget.length) ||
