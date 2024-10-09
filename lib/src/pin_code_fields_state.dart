@@ -232,10 +232,10 @@ class PinCodeFieldsState extends State<PinCodeFields> {
 
   bool isIndexSelected(int index) {
     if (!widget.enabled) return false;
-
+    if (_inputList[index].isNotEmpty) return true;
+    if (!_focusNode.hasFocus) return false;
     return _selectedIndex == index ||
-        (_selectedIndex == index + 1 && index + 1 == widget.length) ||
-        (_inputList[index].isNotEmpty);
+        (_selectedIndex == index + 1 && index + 1 == widget.length);
   }
 
   String _getText(int index) {
