@@ -118,6 +118,7 @@ class PinCodeFields extends StatefulWidget {
   final ValueChanged<String> onComplete;
 
   final Alignment alignment;
+  final double fieldSpace;
 
   PinCodeFields({
     this.length = 4,
@@ -154,6 +155,7 @@ class PinCodeFields extends StatefulWidget {
     required this.onComplete,
     this.autofillHints,
     this.alignment = Alignment.bottomCenter,
+    this.fieldSpace = 10,
   });
 
   @override

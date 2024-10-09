@@ -33,7 +33,6 @@ class PinCodeFieldsState extends State<PinCodeFields> {
         alignment: widget.alignment,
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.only(bottom: 4.0),
             child: AbsorbPointer(
               absorbing: true,
               child: TextFormField(
@@ -145,7 +144,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
               child: _generateTextField(i),
             )
           : Container(
-              margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 0.0),
+              margin: EdgeInsets.only(right: i != widget.length - 1 ? widget.fieldSpace : 0),
               child: _generateTextField(i),
             );
       textFieldWidgets.add(field);
