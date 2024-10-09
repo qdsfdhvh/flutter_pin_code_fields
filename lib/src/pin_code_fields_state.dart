@@ -216,7 +216,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
         break;
       case "border":
         {
-          if (isIndexSelected(index)) {
+          if (isBorderIndexSelected(index)) {
             return color = widget.activeBorderColor;
           }
 
@@ -232,6 +232,12 @@ class PinCodeFieldsState extends State<PinCodeFields> {
     if (!widget.enabled) return false;
     if (_inputList[index].isNotEmpty) return true;
     if (!_focusNode.hasFocus) return false;
+    return _selectedIndex == index ||
+        (_selectedIndex == index + 1 && index + 1 == widget.length);
+  }
+
+  bool isBorderIndexSelected(int index) {
+    if (!_focusNode.hasFocus || !widget.enabled) return false;
     return _selectedIndex == index ||
         (_selectedIndex == index + 1 && index + 1 == widget.length);
   }
