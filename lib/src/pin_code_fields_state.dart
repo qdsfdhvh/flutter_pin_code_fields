@@ -235,7 +235,7 @@ class PinCodeFieldsState extends State<PinCodeFields> {
 
     return _selectedIndex == index ||
         (_selectedIndex == index + 1 && index + 1 == widget.length) ||
-        _inputList.length > index;
+        (_inputList[index].isNotEmpty);
   }
 
   String _getText(int index) {
