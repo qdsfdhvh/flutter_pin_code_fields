@@ -64,7 +64,6 @@ class PinCodeFieldsState extends State<PinCodeFields> {
             onTap: _onFocus,
             child: Container(
               constraints: const BoxConstraints(minHeight: 30),
-              padding: const EdgeInsets.symmetric(vertical: 8),
               child: _generateFields(),
             ),
           ),
