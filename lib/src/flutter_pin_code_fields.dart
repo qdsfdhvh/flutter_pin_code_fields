@@ -156,6 +156,7 @@ class PinCodeFields extends StatefulWidget {
     this.autofillHints,
     this.alignment = Alignment.bottomCenter,
     this.fieldSpace = 10,
+    super.key,
   });
 
   @override
